@@ -1,0 +1,83 @@
+<script>
+  elem("account").onclick = serviceClicked;
+  elem("hr").onclick = serviceClicked;
+
+  elem("get").onclick = methodClicked;
+  elem("post").onclick = methodClicked;
+  elem("put").onclick = methodClicked;
+  elem("delete").onclick = methodClicked;
+  
+  elem("show_accesstoken").onclick = returnAccessToken;
+  elem("refresh_token").onclick = runRefreshToken;
+  
+  function elem(id) {
+    return document.getElementById(id);
+  }
+    
+  function serviceClicked() {
+    var path;
+    switch(this.id) {
+      case "account":
+        path = "companies";
+        break;
+      case "hr":
+        path = "users/me";
+    }
+    elem("path").value = path;
+    elem("baseUrl").textContent = this.value;
+  }
+  
+  function methodClicked() {
+    var endpoint = elem("baseUrl").textContent + elem("path").value;
+    var obj = {}
+    obj["method"] = this.id;
+    obj["payload"] = elem("payload").value;
+    obj["endpoint"] = endpoint;
+    google.script.run
+    .withFailureHandler(onFailure)
+    .withSuccessHandler(onSuccess)
+    .withUserObject(endpoint)
+    .runMethod(obj);
+  }
+  
+  function onSuccess(result, endpoint) {
+    var json = JSON.stringify(result["body"], null, 2);
+    if(elem("withHeaders").checked) {// withHeadersがチェックされていたら
+      json = json + "\n" + "---headers---\n" + JSON.stringify(result["headers"], null, 2);// headersを追加する
+    }
+    elem("response").value = json;
+    updateResponseHistories(json, endpoint);
+  }
+  
+  function updateResponseHistories(json, endpoint) {
+    var ResponseHistoriesValue = elem("response_histories").value + endpoint + "\n" + json + "\n\n";
+    elem("response_histories").value = ResponseHistoriesValue;
+  }
+
+  function returnAccessToken() {
+    google.script.run
+    .withFailureHandler(onFailure)
+    .withSuccessHandler(showAccessToken)
+    .getUserProperty("access_token");
+  }
+
+  function showAccessToken(access_token) {
+    elem("token_response").value = access_token;
+  }
+
+  function runRefreshToken() {
+    google.script.run
+    .withFailureHandler(onFailure)
+    .withSuccessHandler(tokenRefreshed)
+    .runRefresh();
+  }
+
+  function tokenRefreshed(result) {
+    elem("token_response").value = result;
+  }
+
+  function onFailure(e) {
+    alert([e.message, e.stack]);
+  }
+
+</script>

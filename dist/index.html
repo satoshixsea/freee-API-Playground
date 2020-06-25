@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <?!= include('css'); ?>
+  </head>
+  <body>
+    freee API Playground for Google Apps Script<br><br>
+    <button id="refresh_token">token refresh</button>
+    <button id="show_accesstoken">your accesstoken</button>
+    <input type="text" id="token_response">
+    <br>
+    <hr>
+    <input type="radio" name="service" id="account" value="https://api.freee.co.jp/api/1/" checked="checked">
+    <label for="account">会計freee API</label>
+    <br>
+    <input type="radio" name="service"  id="hr" value="https://api.freee.co.jp/hr/api/v1/">
+    <label for="hr">人事労務freee API</label>
+    <br><br>
+    request<br>
+    <label id="baseUrl">https://api.freee.co.jp/api/1/</label>
+    <input type="text" id="path" value="companies">
+    <br><br>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <div id="upperRight">
+              <button id="get">GET</button><br>
+              <button id="post">POST</button><br>
+              <button id="put">PUT</button><br>
+              <button id="delete">DELETE</button><br>
+              <br>
+              payload（JSON）<br>
+              <textarea id="payload"></textarea>
+            </div>
+          </td>
+          <td>
+            response　<label><input type="checkbox" id="withHeaders">with headers</label>
+            <br>
+            <textarea id="response"></textarea>
+          <br>
+            response_histories<br>
+            <textarea id="response_histories"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <?!= include('js'); ?>
+  </body>
+</html>
