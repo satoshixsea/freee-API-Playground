@@ -64,7 +64,8 @@ function runMethod(obj) {
     "method": method,
     "contentType": "application/json",
     "headers": { 
-      "Authorization": "Bearer " + access_token
+      "Authorization": "Bearer " + access_token,
+      "X-Api-Version": 2020-06-15
     },
     "payload": payload,
     "muteHttpExceptions": true
