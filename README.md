@@ -3,6 +3,7 @@
 <a href="https://accounts.secure.freee.co.jp/public_api/authorize?client_id=c5f4e365ce4dee9df3d8ecb0d99794b77ebba3624f90db02de0c8cc58bab3c72&redirect_uri=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbzcDPjC5EbWBNO15UlYei9yXAbfB96hVByUyhBbr4nVh4xgLA4e%2Fexec&response_type=code">freeeと連携する</a>
 <br>
 
+<img src="https://user-images.githubusercontent.com/5506377/85730917-039d1f80-b735-11ea-9e95-a6cd09653bc2.png" width="360px">
 
 ## 利用方法
 
