@@ -19,14 +19,18 @@
 1. freeeと連携する をクリック
 2. freeeのデータを読み書きする権限をアプリに許可する
 3. Googleアカウントにアプリの実行を許可する
+<img src="https://user-images.githubusercontent.com/5506377/85800872-b349b000-b77c-11ea-99e4-a79b6f15f1da.png" width="600px">
+
 
 使い方
 - 会計freee / 人事労務freeeを選択します
 - requestにcompaniesなどのリソースやパラメータを入れてGETボタンをクリックします
-- POST / PUT / DELETEを行う際はpayloadにJSONを入れてクリックします
+  - POST / PUT / DELETEを行う際はpayloadにJSONを入れてクリックします
 - レスポンスヘッダも取得したい時は with headers をチェックします
 - token refresh：アクセストークンを更新
 - your accesstoken：保存されている最新のアクセストークンを表示
+<img src="https://user-images.githubusercontent.com/5506377/85800938-d1afab80-b77c-11ea-8edf-cc25a0e105f4.png" width="600px">
+
 
 注意事項
 - 指定した事業所のデータを実際に読み書きします
