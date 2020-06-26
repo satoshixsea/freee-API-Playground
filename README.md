@@ -30,7 +30,7 @@
 使い方
 - 会計freee / 人事労務freeeを選択します
 - requestにcompaniesなどのリソースやパラメータを入れてGETボタンをクリックします
-  - POST / PUT / DELETEを行う際はpayloadにJSONを入れてクリックします
+  - POST / PUT / DELETEを行う際はpayloadにJSONを入れて各ボタンをクリックします
 - レスポンスヘッダも取得したい時は with headers をチェックします
 - token refresh：アクセストークンを更新
 - your accesstoken：保存されている最新のアクセストークンを表示
