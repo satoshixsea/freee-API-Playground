@@ -19,7 +19,7 @@
 
 連携方法
 
-※事前に別のタブでfreeeにログインしておいてください →<a href="https://accounts.secure.freee.co.jp/login/accounting?a=false&e=0&o=true">ログインはこちら</a>
+事前に別のタブでfreeeにログインしておいてください →<a href="https://accounts.secure.freee.co.jp/login/accounting?a=false&e=0&o=true">ログインはこちら</a>
 
 1. <a href="https://accounts.secure.freee.co.jp/public_api/authorize?client_id=c5f4e365ce4dee9df3d8ecb0d99794b77ebba3624f90db02de0c8cc58bab3c72&redirect_uri=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbzcDPjC5EbWBNO15UlYei9yXAbfB96hVByUyhBbr4nVh4xgLA4e%2Fexec&response_type=code">freeeと連携する</a> をクリック
 2. freeeのデータを読み書きする権限をアプリに許可する
