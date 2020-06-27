@@ -9,7 +9,7 @@
 
 ※この連携アプリを利用するためにはGoogleアカウントが必要です
 
-このアプリについて
+### このアプリについて
 - freee APIをいつでもすぐに試せる環境を手元に作れます
 - Google Apps ScriptのUser Propertiesにfreeeの認証情報が保存されます<br>
   →アクセストークンやリフレッシュトークンの情報がGoogleアカウントに保存されます
@@ -17,7 +17,7 @@
 
 
 
-連携方法
+### 連携方法
 
 事前に別のタブでfreeeにログインしておいてください →<a href="https://accounts.secure.freee.co.jp/login/accounting?a=false&e=0&o=true">ログインはこちら</a>
 
@@ -27,7 +27,7 @@
 <img src="https://user-images.githubusercontent.com/5506377/85800872-b349b000-b77c-11ea-99e4-a79b6f15f1da.png" width="600px">
 
 
-使い方
+### 使い方
 - 会計freee / 人事労務freeeを選択します
 - requestにcompaniesなどのリソースやパラメータを入れてGETボタンをクリックします
   - POST / PUT / DELETEを行う際はpayloadにJSONを入れて各ボタンをクリックします
@@ -37,11 +37,11 @@
 <img src="https://user-images.githubusercontent.com/5506377/85800938-d1afab80-b77c-11ea-8edf-cc25a0e105f4.png" width="600px">
 
 
-注意事項
+### 注意事項
 - 指定した事業所のデータを実際に読み書きします
 - テスト環境で試すことをおすすめします
 
-連携解除方法
+### 連携解除方法
 - freeeの連携を解除する<br>
   →<a href="https://app.secure.freee.co.jp/developers/applications">マイアプリ一覧</a>
   →連携解除
@@ -49,4 +49,7 @@
   →<a href="https://myaccount.google.com/permissions?pli=1">アカウントにアクセスできるアプリ</a>
   →アクセス権を削除
   
+
+### ライセンス
+<a href="https://github.com/satoshixsea/freee-API-Playground-for-GAS/blob/master/LICENSE">BSD 2-Clause "Simplified" License</a>
 
