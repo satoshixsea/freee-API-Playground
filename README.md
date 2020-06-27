@@ -11,7 +11,7 @@
 
 このアプリについて
 - freee APIをいつでもすぐに試せる環境を手元に作れます
-- Google Apps ScriptのUser Propertyにfreeeの認証情報が保存されます<br>
+- Google Apps ScriptのUser Propertiesにfreeeの認証情報が保存されます<br>
   →アクセストークンやリフレッシュトークンの情報がGoogleアカウントに保存されます
 - GitHubのソースコードをクローンしてfreeeアプリを作成すれば自由にカスタマイズできます
 
