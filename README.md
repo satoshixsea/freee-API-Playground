@@ -40,6 +40,7 @@
 ### 注意事項
 - 指定した事業所のデータを実際に読み書きします
 - テスト環境で試すことをおすすめします
+- Google Apps Scriptには1日の利用回数や利用量に制限があり、上限を超えると利用できなくなります→<a href="https://developers.google.com/apps-script/guides/services/quotas">Quotas</a>
 
 ### 連携解除方法
 - freeeの連携を解除する<br>
