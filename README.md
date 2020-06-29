@@ -44,7 +44,7 @@
 
 ### 連携解除方法
 - freeeの連携を解除する<br>
-  →<a href="https://app.secure.freee.co.jp/developers/applications">マイアプリ一覧</a>
+  →<a href="https://app.secure.freee.co.jp/applications">マイアプリ一覧</a>
   →連携解除
 - Googleアカウントの実行許可を削除する<br>
   →<a href="https://myaccount.google.com/permissions?pli=1">アカウントにアクセスできるアプリ</a>
