@@ -1,4 +1,4 @@
-# freee-API-Playground-for-GAS
+# freee-API-Playground
 
 <a href="https://accounts.secure.freee.co.jp/public_api/authorize?client_id=c5f4e365ce4dee9df3d8ecb0d99794b77ebba3624f90db02de0c8cc58bab3c72&redirect_uri=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbzcDPjC5EbWBNO15UlYei9yXAbfB96hVByUyhBbr4nVh4xgLA4e%2Fexec&response_type=code">freeeと連携する</a>
 <br>
@@ -52,5 +52,5 @@
   
 
 ### ライセンス
-<a href="https://github.com/satoshixsea/freee-API-Playground-for-GAS/blob/master/LICENSE">BSD 2-Clause "Simplified" License</a>
+<a href="https://github.com/satoshixsea/freee-API-Playground/blob/master/LICENSE">BSD 2-Clause "Simplified" License</a>
 
