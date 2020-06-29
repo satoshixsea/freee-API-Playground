@@ -70,12 +70,19 @@ function runMethod(obj) {
     "payload": payload,
     "muteHttpExceptions": true
   }
+
   var response = UrlFetchApp.fetch(url, options);// ここでAPIを実行して結果を取得する
-  var allHeaders = response.getAllHeaders();// ヘッダー情報を取得する
-  var json = JSON.parse(response);
+  var body;
+
+  if(response.getContentText() === "") {// responseの中身が空なら
+    body = "";// JSON.parseするとSyntaxError: Unexpected end of JSON inputが出るので回避する
+  } else {// responseの中身が空じゃなければ
+    body = JSON.parse(response);
+  }
+
   var result = {
-    "headers": allHeaders,
-    "body": json
+    "headers": response.getAllHeaders(),// ヘッダー情報を取得する
+    "body": body
   }
   return result;
 }
