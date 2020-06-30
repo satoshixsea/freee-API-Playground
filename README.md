@@ -54,3 +54,7 @@
 ### ライセンス
 <a href="https://github.com/satoshixsea/freee-API-Playground/blob/master/LICENSE">BSD 2-Clause "Simplified" License</a>
 
+
+### freeeのAPIリファレンス
+freee APIの公式サイト→<a href="https://developer.freee.co.jp/">freee Developers Site</a>
+
