@@ -46,7 +46,7 @@
 - Google Apps Scriptには1日の利用回数や利用量に制限があり、上限を超えると利用できなくなります→<a href="https://developers.google.com/apps-script/guides/services/quotas">Quotas</a>
 
 ### 連携解除方法
-- freeeの連携を解除する<br>
+- freeeの連携を解除する（公開申請中）<br>
   →<a href="https://app.secure.freee.co.jp/applications">マイアプリ一覧</a>
   →連携解除
 - Googleアカウントの実行許可を削除する<br>
