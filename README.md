@@ -29,6 +29,10 @@
 3. Googleアカウントにアプリの実行を許可する
 <img src="https://user-images.githubusercontent.com/5506377/86063934-ea82ce80-baa6-11ea-9a63-41549ca4f541.png" width="600px">
 
+※REVIEW PERMISSIONSの際に表示される prepractice.home@gmail.com は、このアプリケーションの開発アカウントです。 <br>
+お問い合わせは<a href="https://forms.gle/QStmNTsDWAsWs5Wd6">フォーム</a>からお願いいたします。
+
+コード.gs内のUrlFetchApp.fetch()でfreeeのAPIに接続するため「外部サービスへの接続」の許可を求められます。
 
 ### 使い方
 - 会計freee / 人事労務freeeを選択します
