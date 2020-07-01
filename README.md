@@ -5,6 +5,9 @@
 
 <img src="https://user-images.githubusercontent.com/5506377/86060895-ab517f00-baa0-11ea-985e-5c5ae7045478.png" width="360px">
 
+連携のイメージ<br>
+<img src="https://user-images.githubusercontent.com/5506377/86190486-6fd9b200-bb7f-11ea-9eab-71943cee226e.png" width="840px">
+
 ## 利用方法
 
 ※この連携アプリを利用するためにはGoogleアカウントが必要です
