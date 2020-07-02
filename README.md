@@ -32,7 +32,8 @@
 ※REVIEW PERMISSIONSの際に表示される prepractice.home@gmail.com は、このアプリケーションの開発アカウントです。 <br>
 お問い合わせは<a href="https://forms.gle/QStmNTsDWAsWs5Wd6">フォーム</a>からお願いいたします。
 
-コード.gs内のUrlFetchApp.fetch()でfreeeのAPIに接続するため「外部サービスへの接続」の許可を求められます。
+コード.gs内のUrlFetchApp.fetch()でfreeeのAPIに接続するため「外部サービスへの接続」の許可を求められます。<br>
+現状では「このアプリは確認されていません」「〜（安全ではないページ）に移動」などの表示が出て、Max100ユーザまでの利用となります。→解決へ向けて調査中
 
 ### 使い方
 - 会計freee / 人事労務freeeを選択します
