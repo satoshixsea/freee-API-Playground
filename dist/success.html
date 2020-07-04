@@ -2,7 +2,26 @@
 <html>
   <body>
     Success!
-    <a target="_blank" href="https://script.google.com/macros/s/AKfycbzcDPjC5EbWBNO15UlYei9yXAbfB96hVByUyhBbr4nVh4xgLA4e/exec">アプリを起動する</a>
+    <a target="_blank" id="appLink">アプリを起動する</a>
+    
+    <script>
+    getAppUrl();
+    
+    function getAppUrl() {
+      google.script.run
+      .withFailureHandler(onFailure)
+      .withSuccessHandler(gotAppUrl)
+      .returnAppUrl();
+    }
+    
+    function gotAppUrl(url) {
+      document.getElementById("appLink").href = url;
+    }
+    
+    function onFailure(e) {
+      alert([e.message, e.stack]);
+    }
+    </script>
   </body>
 </html>
 
