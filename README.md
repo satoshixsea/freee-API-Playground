@@ -1,6 +1,6 @@
 # freee-API-Playground
 
-<a href="https://accounts.secure.freee.co.jp/public_api/authorize?client_id=c5f4e365ce4dee9df3d8ecb0d99794b77ebba3624f90db02de0c8cc58bab3c72&redirect_uri=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbzcDPjC5EbWBNO15UlYei9yXAbfB96hVByUyhBbr4nVh4xgLA4e%2Fexec&response_type=code">freeeと連携する</a>
+<a href="">freeeと連携する[メンテナンス中]</a>
 <br>
 
 <img src="https://user-images.githubusercontent.com/5506377/86060895-ab517f00-baa0-11ea-985e-5c5ae7045478.png" width="360px">
@@ -24,7 +24,7 @@
 
 事前に別のタブでfreeeにログインしておいてください →<a href="https://accounts.secure.freee.co.jp/login/accounting?a=false&e=0&o=true">ログインはこちら</a>
 
-1. <a href="https://accounts.secure.freee.co.jp/public_api/authorize?client_id=c5f4e365ce4dee9df3d8ecb0d99794b77ebba3624f90db02de0c8cc58bab3c72&redirect_uri=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbzcDPjC5EbWBNO15UlYei9yXAbfB96hVByUyhBbr4nVh4xgLA4e%2Fexec&response_type=code">freeeと連携する</a> をクリック
+1. freeeと連携する</a> をクリック
 2. freeeのデータを読み書きする権限をアプリに許可する
 3. Googleアカウントにアプリの実行を許可する
 <img src="https://user-images.githubusercontent.com/5506377/86063934-ea82ce80-baa6-11ea-9a63-41549ca4f541.png" width="600px">
