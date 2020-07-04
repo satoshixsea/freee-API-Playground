@@ -1,6 +1,6 @@
 # freee-API-Playground
 
-<a href="">freeeと連携する[メンテナンス中]</a>
+<a href="https://accounts.secure.freee.co.jp/public_api/authorize?client_id=c5f4e365ce4dee9df3d8ecb0d99794b77ebba3624f90db02de0c8cc58bab3c72&redirect_uri=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbz0yAIPZKaBAoQDiofy-6l-w3qziBKoeq2-FQSod_8FC5WBQRvF%2Fexec&response_type=code">freeeと連携する</a>
 <br>
 
 <img src="https://user-images.githubusercontent.com/5506377/86060895-ab517f00-baa0-11ea-985e-5c5ae7045478.png" width="360px">
@@ -27,13 +27,13 @@
 1. freeeと連携する</a> をクリック
 2. freeeのデータを読み書きする権限をアプリに許可する
 3. Googleアカウントにアプリの実行を許可する
-<img src="https://user-images.githubusercontent.com/5506377/86063934-ea82ce80-baa6-11ea-9a63-41549ca4f541.png" width="600px">
+<img src="https://user-images.githubusercontent.com/5506377/86514710-7ea9b880-be4e-11ea-8160-8a6f90ffde29.png" width="600px">
 
-※REVIEW PERMISSIONSの際に表示される prepractice.home@gmail.com は、このアプリケーションの開発アカウントです。 <br>
+※REVIEW PERMISSIONSの際に表示される oassith@gmail.com は、このアプリケーションの開発アカウントです。 <br>
 お問い合わせは<a href="https://forms.gle/QStmNTsDWAsWs5Wd6">フォーム</a>からお願いいたします。
 
 コード.gs内のUrlFetchApp.fetch()でfreeeのAPIに接続するため「外部サービスへの接続」の許可を求められます。<br>
-現状では「このアプリは確認されていません」「〜（安全ではないページ）に移動」などの表示が出て、Max100ユーザまでの利用となります。→解決へ向けて調査中
+現状では「このアプリは確認されていません」「〜（安全ではないページ）に移動」などの表示が出て、Max100ユーザまでの利用となります。→Googleへ確認のリクエスト中
 
 ### 使い方
 - 会計freee / 人事労務freeeを選択します
