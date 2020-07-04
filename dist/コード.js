@@ -1,7 +1,11 @@
 var token_url = "https://accounts.secure.freee.co.jp/public_api/token";
 var client_id = getScriptProperty("client_id");
 var client_secret = getScriptProperty("client_secret");
-var redirect_uri = ScriptApp.getService().getUrl();// このスクリプトのWebアプリのURL
+var redirect_uri = returnAppUrl();
+
+function returnAppUrl() {// success.htmlでも呼ぶので関数にしておく
+  return ScriptApp.getService().getUrl();// このスクリプトのWebアプリのURL
+}
 
 function doGet(e) {
   if (e["parameter"]["code"]) {// eに認可コードがあれば
