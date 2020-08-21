@@ -15,7 +15,7 @@
   }
     
   function serviceClicked() {
-    var path;
+    let path;
     switch(this.id) {
       case "account":
         path = "companies";
@@ -28,8 +28,8 @@
   }
   
   function methodClicked() {
-    var endpoint = elem("baseUrl").textContent + elem("path").value;
-    var obj = {}
+    const endpoint = elem("baseUrl").textContent + elem("path").value;
+    let obj = {}
     obj["method"] = this.id;
     obj["payload"] = elem("payload").value;
     obj["endpoint"] = endpoint;
@@ -41,7 +41,7 @@
   }
   
   function onSuccess(result, endpoint) {
-    var json = JSON.stringify(result["body"], null, 2);
+    let json = JSON.stringify(result["body"], null, 2);
     if(elem("withHeaders").checked) {// withHeadersがチェックされていたら
       json = json + "\n" + "---headers---\n" + JSON.stringify(result["headers"], null, 2);// headersを追加する
     }
@@ -50,7 +50,7 @@
   }
   
   function updateResponseHistories(json, endpoint) {
-    var ResponseHistoriesValue = elem("response_histories").value + endpoint + "\n" + json + "\n\n";
+    let ResponseHistoriesValue = elem("response_histories").value + endpoint + "\n" + json + "\n\n";
     elem("response_histories").value = ResponseHistoriesValue;
   }
 

@@ -1,7 +1,7 @@
-var token_url = "https://accounts.secure.freee.co.jp/public_api/token";
-var client_id = getScriptProperty("client_id");
-var client_secret = getScriptProperty("client_secret");
-var redirect_uri = returnAppUrl();
+const token_url = "https://accounts.secure.freee.co.jp/public_api/token";
+const client_id = getScriptProperty("client_id");
+const client_secret = getScriptProperty("client_secret");
+const redirect_uri = returnAppUrl();
 
 function returnAppUrl() {// success.htmlでも呼ぶので関数にしておく
   return ScriptApp.getService().getUrl();// このスクリプトのWebアプリのURL
@@ -9,7 +9,7 @@ function returnAppUrl() {// success.htmlでも呼ぶので関数にしておく
 
 function doGet(e) {
   if (e["parameter"]["code"]) {// eに認可コードがあれば
-    var response = getAccessToken(e);// 初回アクセストークンを取得する
+    getAccessToken(e);// 初回アクセストークンを取得する
     return HtmlService.createTemplateFromFile("success").evaluate();// ここでindexを開くと?code=がURLについている→ページ更新したときにエラーが出るためsuccessページをはさむ
   } else { // eに認可コードがない場合はindexを開く
     return HtmlService.createTemplateFromFile("index").evaluate();
@@ -25,15 +25,15 @@ function include(filename) {// css.htmlやjs.html等を読み込めるように�
 次回からはリフレッシュトークンを使ってトークン情報を更新できる
 ************************************/
 function getAccessToken(e) {
-  var code = e["parameter"]["code"];
-  var payload = {
+  const code = e["parameter"]["code"];
+  const payload = {
     "grant_type": "authorization_code",
     "client_id": client_id,
     "client_secret": client_secret,
     "code": code,
     "redirect_uri": redirect_uri
   }
-  var response = UrlFetchApp.fetch(token_url, getOptions(payload));
+  const response = UrlFetchApp.fetch(token_url, getOptions(payload));
   setUserProperties(JSON.parse(response));// response内のトークン等の情報をユーザープロパティに保存する
   return response;
 }
@@ -42,14 +42,14 @@ function getAccessToken(e) {
 refresh_tokenを使って更新したトークン情報を返す
 ************************************/
 function runRefresh() { 
-  var refresh_token = getUserProperty("refresh_token");
-  var payload = {
+  const refresh_token = getUserProperty("refresh_token");
+  const payload = {
     "grant_type": "refresh_token",
     "client_id": client_id,
     "client_secret": client_secret,
     "refresh_token": refresh_token
   }
-  var response = UrlFetchApp.fetch(token_url, getOptions(payload));
+  const response = UrlFetchApp.fetch(token_url, getOptions(payload));
   setUserProperties(JSON.parse(response));
   return "refresh done";
 }
@@ -59,12 +59,12 @@ function runRefresh() {
 ************************************/
 function runMethod(obj) {
   runRefresh();// 実行する度にトークンリフレッシュする
-  var url = obj["endpoint"];
-  var method = obj["method"];
-  var payload = obj["payload"];
-  var access_token = getUserProperty("access_token");  
+  const url = obj["endpoint"];
+  const method = obj["method"];
+  const payload = obj["payload"];
+  const access_token = getUserProperty("access_token");  
   
-  var options = {
+  const options = {
     "method": method,
     "contentType": "application/json",
     "headers": { 
@@ -75,8 +75,8 @@ function runMethod(obj) {
     "muteHttpExceptions": true
   }
 
-  var response = UrlFetchApp.fetch(url, options);// ここでAPIを実行して結果を取得する
-  var body;
+  const response = UrlFetchApp.fetch(url, options);// ここでAPIを実行して結果を取得する
+  let body;
 
   if(response.getContentText() === "") {// responseの中身が空なら
     body = "";// JSON.parseするとSyntaxError: Unexpected end of JSON inputが出るので回避する
@@ -84,7 +84,7 @@ function runMethod(obj) {
     body = JSON.parse(response);
   }
 
-  var result = {
+  const result = {
     "headers": response.getAllHeaders(),// ヘッダー情報を取得する
     "body": body
   }
@@ -95,7 +95,7 @@ function runMethod(obj) {
 optionsを作って返す
 ************************************/
 function getOptions(payload) {
-  var options = {
+  const options = {
     "method": "post",
     "contentType": "application/x-www-form-urlencoded",
     "payload": payload
