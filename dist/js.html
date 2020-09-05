@@ -10,6 +10,8 @@
   elem("show_accesstoken").onclick = returnAccessToken;
   elem("refresh_token").onclick = runRefreshToken;
   
+  elem("account").click();
+  
   function elem(id) {
     return document.getElementById(id);
   }
@@ -23,12 +25,11 @@
       case "hr":
         path = "users/me";
     }
-    elem("path").value = path;
-    elem("baseUrl").textContent = this.value;
+    elem("requestUrl").value = this.value + path;
   }
   
   function methodClicked() {
-    const endpoint = elem("baseUrl").textContent + elem("path").value;
+    const endpoint = elem("requestUrl").value;
     let obj = {}
     obj["method"] = this.id;
     obj["payload"] = elem("payload").value;
