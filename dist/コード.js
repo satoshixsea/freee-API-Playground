@@ -62,14 +62,15 @@ function runMethod(obj) {
   const url = obj["endpoint"];
   const method = obj["method"];
   const payload = obj["payload"];
-  const access_token = getUserProperty("access_token");  
+  const access_token = getUserProperty("access_token");
+  const apiVersion =  obj["apiVersion"];
   
   const options = {
     "method": method,
     "contentType": "application/json",
     "headers": { 
       "Authorization": "Bearer " + access_token,
-      "X-Api-Version": "2020-06-15"
+      "X-Api-Version": apiVersion
     },
     "payload": payload,
     "muteHttpExceptions": true
