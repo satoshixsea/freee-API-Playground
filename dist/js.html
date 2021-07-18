@@ -1,7 +1,4 @@
 <script>
-  elem("account").onclick = serviceClicked;
-  elem("hr").onclick = serviceClicked;
-
   elem("get").onclick = methodClicked;
   elem("post").onclick = methodClicked;
   elem("put").onclick = methodClicked;
@@ -10,22 +7,8 @@
   elem("show_accesstoken").onclick = returnAccessToken;
   elem("refresh_token").onclick = runRefreshToken;
   
-  elem("account").click();
-  
   function elem(id) {
     return document.getElementById(id);
-  }
-    
-  function serviceClicked() {
-    let path;
-    switch(this.id) {
-      case "account":
-        path = "companies";
-        break;
-      case "hr":
-        path = "users/me";
-    }
-    elem("requestUrl").value = this.value + path;
   }
   
   function methodClicked() {
