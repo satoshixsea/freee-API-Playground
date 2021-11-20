@@ -1,7 +1,7 @@
 const token_url = "https://accounts.secure.freee.co.jp/public_api/token";
 const client_id = getScriptProperty("client_id");
 const client_secret = getScriptProperty("client_secret");
-const redirect_uri =returnAppUrl();
+const redirect_uri = returnAppUrl();
 
 function returnAppUrl() {// success.htmlでも呼ぶので関数にしておく
   returngetScriptProperty("redirect_uri");// このスクリプトのWebアプリのURL
