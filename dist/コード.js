@@ -4,7 +4,7 @@ const client_secret = getScriptProperty("client_secret");
 const redirect_uri = returnAppUrl();
 
 function returnAppUrl() {// success.htmlでも呼ぶので関数にしておく
-  return ScriptApp.getService().getUrl();// このスクリプトのWebアプリのURL
+  returngetScriptProperty("redirect_uri");// このスクリプトのWebアプリのURL
 }
 
 function doGet(e) {
