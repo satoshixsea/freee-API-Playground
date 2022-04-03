@@ -17,7 +17,6 @@
     obj["method"] = this.id;
     obj["payload"] = elem("payload").value;
     obj["endpoint"] = endpoint;
-    obj["apiVersion"] = elem("apiVersion").value;
     google.script.run
     .withFailureHandler(onFailure)
     .withSuccessHandler(onSuccess)
